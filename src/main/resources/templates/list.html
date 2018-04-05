@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Exemplo - Authorization Code</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+    <body>
+        <div th:if="${cursos != null}">
+            <h1>Lista de Cursos</h1>
+            <table>
+                <tr>
+                    <th>Curso</th>
+                    <th>Nível</th>
+                    <th>Unidade</th>
+                    <th>Município</th>
+                    <th>Tipo do Curso</th>
+                </tr>
+                <tr th:each="c : ${cursos}">
+                    <td th:text="${c.curso}"></td>
+                    <td th:text="${c.nivel}"></td>
+                    <td th:text="${c.unidade}"></td>
+                    <td th:text="${c.municipio}"></td>
+                    <td th:text="${c.tipoCurso}"></td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>

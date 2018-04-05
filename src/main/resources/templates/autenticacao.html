@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>Exemplo - Authorization Code</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <h1>Credenciais da Aplicação</h1>
+    <form action="#" th:action="@{/autorizacao}" th:object="${credentials}" method="post">
+        <p>xApiKey: <input type="text" th:field="*{xApiKey}" /></p>
+        <p>clientId: <input type="text" th:field="*{clientId}" /></p>
+        <p>clientSecret: <input type="text" th:field="*{clientSecret}" /></p>
+        <p><input type="submit" value="Autenticar-se" /> <input type="reset" value="Cancelar" /></p>
+    </form>
+</body>
+</html>
