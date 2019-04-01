@@ -5,6 +5,10 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     </head>
     <body>
+
+        <p><a th:href="@{/logout}">Sair</a></p>
+        <p><a th:href="@{/}">Obter novo Autorization Code!</a></p>
+
         <div th:if="${cursos != null}">
             <h1>Lista de Cursos</h1>
             <table>
